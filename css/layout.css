@@ -100,7 +100,7 @@ a.pure-button-transparent {
     font-weight: bold;
 }
 
-.home-menu a {
+.home-menu li a {
     color: #6FBEF3;
 }
 .home-menu li a:hover,
@@ -117,6 +117,9 @@ a.pure-button-transparent {
 }
 .header-login fieldset {
     padding-bottom: 0.35em;
+}
+.header-login a {
+    background: #33AA33;
 }
 @media (min-width: 1000px) {
     .header-login {
