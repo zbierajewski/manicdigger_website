@@ -86,8 +86,8 @@ class Registration
                     $this->errors[] = "Sorry, that username is already taken.";
                 } else {
                     // write new user's data into database
-                    $sql = "INSERT INTO users (user_name, user_password_hash)
-                            VALUES('" . $user_name . "', '" . $user_password_hash . "');";
+                    $sql = "INSERT INTO users (user_name, user_password_hash, registered_on)
+                            VALUES('" . $user_name . "', '" . $user_password_hash . "', NOW());";
                     $query_new_user_insert = $this->db_connection->query($sql);
 
                     // if user has been added successfully

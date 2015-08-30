@@ -78,16 +78,24 @@ class Login
                     // get result row (as an object)
                     $result_row = $result_of_login_check->fetch_object();
 
+                    //TODO: Handle legacy logins (do not allow login but require changing the password in advance)
+
                     // using PHP 5.5's password_verify() function to check if the provided password fits
                     // the hash of that user's password
                     if (password_verify($_POST['user_password'], $result_row->user_password_hash)) {
+
+                        //Update 'last_login' field
+                        $sql = "UPDATE users
+                                SET last_login = NOW()
+                                WHERE user_name = '" . $result_row->user_name . "';";
+                        $query_update_login_date = $this->db_connection->query($sql);
 
                         // write user data into PHP SESSION (a file on your server)
                         $_SESSION['user_name'] = $result_row->user_name;
                         $_SESSION['user_login_status'] = 1;
 
                     } else {
-                        $this->errors[] = "Wrong password. Try again.";
+                        $this->errors[] = "Wrong password. Try again."; //TODO: This might be a security risk?
                     }
                 } else {
                     $this->errors[] = "This user does not exist.";
