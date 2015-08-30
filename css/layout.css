@@ -92,9 +92,7 @@ a.pure-button-transparent {
 }
 
 .home-menu .pure-menu-heading {
-    color: white;
-    font-weight: 400;
-    font-size: 120%;
+    text-transform: none;
 }
 
 .home-menu .pure-menu-selected a {
@@ -132,7 +130,7 @@ a.pure-button-transparent {
  */
 .splash-container {
     /*background: #1f8dd6;*/
-	background: transparent url("http://manicdigger.org/images/background.jpg");
+	background: transparent url("../img/background.jpg");
     background-size: cover;
     background-position: center;
     z-index: 1;
