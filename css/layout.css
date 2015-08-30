@@ -111,8 +111,19 @@ a.pure-button-transparent {
     border: none;
     color: #AECFE5;
 }
+
 .header-login {
-	text-align: center;
+	float: left;
+    font-size: 85%;
+    display: none;
+}
+.header-login fieldset {
+    padding-bottom: 0.35em;
+}
+@media (min-width: 1000px) {
+    .header-login {
+        display: block;
+    }
 }
 
 /*
