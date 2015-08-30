@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /play/xml.php
+Disallow: /play/csv.php
+Disallow: /play/
