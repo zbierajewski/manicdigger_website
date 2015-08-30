@@ -1,14 +1,30 @@
+<?php
+// show potential errors / feedback (from login object)
+if (isset($login)) {
+	if ($login->errors) {
+		foreach ($login->errors as $error) {
+			echo $error;
+		}
+	}
+	if ($login->messages) {
+		foreach ($login->messages as $message) {
+			echo $message;
+		}
+	}
+}
+?>
 		<div class="header">
 			<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
 				<div class="header-login">
-					<form id="login" action="/servers/loginuser.php?action=manual_link" class="pure-form" method="post">
+					<form id="login" action="index.php" class="pure-form" method="post">
 						<fieldset>
-							<input class="pure-input-1-5" name="username" type="text" placeholder="Username" />
-							<input name="password" type="password" placeholder="Password" />
-							<button type="submit" name="submit" class="button-xsmall pure-button">Sign in</button>
-							<label for="rememberme">
+							<input class="pure-input-1-5" name="user_name" type="text" placeholder="Username" />
+							<input class="pure-input-1-5" name="user_password" type="password" placeholder="Password" />
+							<button type="submit" name="login" class="pure-button">Sign in</button>
+							<a href="./register.php" class="pure-button">Register</a>
+							<!-- <label for="rememberme">
 								<input name="rememberme" type="checkbox" /> Remember me
-							</label>
+							</label> -->
 						</fieldset>
 					</form>
 				</div>
