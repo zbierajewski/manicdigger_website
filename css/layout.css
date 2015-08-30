@@ -201,14 +201,17 @@ a.pure-button-transparent {
     min-height: 100%;
     background: rgb(220, 220, 220);
 }
+.serverlist-image {
+    padding-right: 1em;
+}
 .serverlist-entry {
     padding: 0 1em 1em 1em;
     border-top: 2px dotted #CCC;
-    line-height: 1.5em;
+    /*line-height: 1.5em;*/
 }
 .serverlist-entry p {
     margin: 0;
-    font-size: 90%;
+    /*font-size: 90%;*/
     /*background-color: #eee;*/
 }
 .serverlist-entry h2 a {

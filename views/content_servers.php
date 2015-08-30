@@ -42,7 +42,7 @@ foreach($servers as $s) {
 ?>
 				</h2>
 				<a class="pure-u-1-6" href="http://mdgallery.strangebutfunny.net/browse.php?serverhash=<?php echo $s->getPublicKey(); ?>">
-					<img class="pure-img" src="http://mdgallery.strangebutfunny.net/serverimage.php?server=<?php echo $s->getPublicKey(); ?>" width="160" height="120"/>
+					<img class="pure-img serverlist-image" src="http://mdgallery.strangebutfunny.net/serverimage.php?server=<?php echo $s->getPublicKey(); ?>" onerror="this.style.display='none'"/>
 				</a>
 				<div class="pure-u-2-3">
 					<p><?php echo htmlspecialchars($s->getMotd()); ?><br/>
@@ -52,7 +52,7 @@ foreach($servers as $s) {
 					Last Ping: <strong><?php echo Utility::formatDateDiff($dateDiff); ?> ago</strong></p>
 				</div>
 				<div class="pure-u-1-6">
-					<a <?php echo 'href="' . $link . '" '; if($offline) { ?>class="pure-button bg-error">Offline<?php } else { ?>class="pure-button bg-success">Online, Join Now!<?php } ?></a>
+					<a <?php echo 'href="' . $link . '" '; if($offline) { ?>class="pure-button bg-error">Offline<?php } else { ?>class="pure-button bg-success">Online<?php } ?></a>
 				</div>
 			</div>
 <?php } ?>
