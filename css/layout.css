@@ -121,7 +121,7 @@ a.pure-button-transparent {
  */
 .splash-container {
     /*background: #1f8dd6;*/
-	background: transparent url("http://manicdigger.org/images/10.png");
+	background: transparent url("http://manicdigger.org/images/background.jpg");
     background-size: cover;
     background-position: center;
     z-index: 1;
