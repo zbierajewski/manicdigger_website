@@ -17,13 +17,22 @@ require_once("classes/Login.php");
 // create a login object. when this object is created, it will do all login/logout stuff automatically
 $login = new Login();
 
-// these views result in the displayed page
-include("views/header.php");
-if ($login->isUserLoggedIn() == true) {
-    // user logged in
-    include("views/menu_logged_in.php");
+if (isset($_GET["location"])) {
+    $view_location = $_GET["location"];
 } else {
-    // user not logged in
-    include("views/menu_not_logged_in.php");
+    $view_location = 'index';
 }
-include("views/content.php");
+
+include("views/header.php");
+include("views/menu_bar.php");
+// display content corresponding to requested location
+switch ($view_location) {
+    case 'servers':
+        include("views/content_servers.php");
+        break;
+    case 'index':
+    default:
+        include("views/content_main.php");
+        break;
+}
+include("views/footer.php");

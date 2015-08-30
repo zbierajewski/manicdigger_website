@@ -195,5 +195,3 @@
 				<small>Website design by Anthony &amp; croxxx. Using some icons made by <a href="http://martz90.deviantart.com/art/Hex-Icons-Pack-389706981">Martz90</a>.</small>
 			</div>
 		</div>
-	</body>
-</html>

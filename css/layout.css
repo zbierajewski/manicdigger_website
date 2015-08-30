@@ -113,7 +113,8 @@ a.pure-button-transparent {
     text-transform: none;
 }
 
-.home-menu .pure-menu-selected a {
+.home-menu .pure-menu-selected a,
+.home-menu .pure-menu-selected a:visited {
     color: white;
     font-weight: bold;
 }
