@@ -23,15 +23,19 @@ if (isset($_GET["location"])) {
     $view_location = 'index';
 }
 
-include("views/header.php");
-include("views/menu_bar.php");
 // display content corresponding to requested location
 switch ($view_location) {
     case 'servers':
+        $page_title = 'Servers';
+        include("views/header.php");
+        include("views/menu_bar.php");
         include("views/content_servers.php");
         break;
     case 'index':
     default:
+        $page_title = 'Home';
+        include("views/header.php");
+        include("views/menu_bar.php");
         include("views/content_main.php");
         break;
 }

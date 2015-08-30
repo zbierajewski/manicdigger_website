@@ -197,6 +197,28 @@ a.pure-button-transparent {
     box-shadow: 0 2em 2em 2em rgba(0, 0, 0, 0.9);
 }
 
+.serverlist-wrapper {
+    min-height: 100%;
+    background: rgb(220, 220, 220);
+}
+.serverlist-entry {
+    padding: 0 1em 1em 1em;
+    border-top: 2px dotted #CCC;
+    line-height: 1.5em;
+}
+.serverlist-entry p {
+    margin: 0;
+    font-size: 90%;
+    /*background-color: #eee;*/
+}
+.serverlist-entry h2 a {
+    color: #22aa22;
+    text-decoration: none;
+}
+.serverlist-entry h2 a.offline-link {
+    color: #aa2222;
+}
+
 /* This is the class used for the main content headers (<h2>) */
 .content-head {
     font-weight: 400;

@@ -1,6 +1,61 @@
-		<div class="content-wrapper">
+		<div class="serverlist-wrapper">
+			<br/><br/><br/>
+			<h1 class="is-center">Manic Digger Online Servers</h1>
+<?php
+require_once "classes/Utility.php";
+require_once "classes/Server.php";
 
-			
+$loggedIn = false;
+$username = null;
+
+if(isset($_SESSION["user_name"])) {
+	$username = $_SESSION["user_name"];
+	$loggedIn = true;
+}
+
+$servers = Server::getServerList();
+$now = new DateTime();
+
+foreach($servers as $s) {
+	$link = "md://" . htmlspecialchars($s->getAddress()) . ":" . htmlspecialchars($s->getPort()) . "/?";
+	if($loggedIn) { $link .= "user=" . urlencode($username) . "&auth=" . urlencode(md5($s->getPrivateKey() . $username)) . "&"; }
+	$link .= "serverPassword=" . $s->getPasswordProtected();
+	$heartbeat = new DateTime($s->getLastHeartbeatDate());
+	$dateDiff = $now->diff($heartbeat);
+	$timeDiff = $now->getTimestamp() - $heartbeat->getTimestamp();
+	$offline = false;
+	if($timeDiff > 300) { $offline = true; }
+?>
+			<div class="pure-g serverlist-entry">
+				<h2 class="pure-u-1">
+<?php
+	echo '<a href="' . $link . '"';
+	if($offline) {
+		echo ' class="offline-link"';
+	}
+	echo '>';
+	if(strtoupper($s->getPasswordProtected()) === 'TRUE') {
+		echo '<img src="img/lock.png" alt="Server requires password." title="Server requires password."/>';
+	}
+	echo '[' . htmlspecialchars($s->getGameMode()) . '] ' . htmlspecialchars($s->getName()) .
+	'<small> (' . htmlspecialchars($s->getUserCount() . '/' . $s->getMaxClients()) . ')</small></a>';
+?>
+				</h2>
+				<a class="pure-u-1-6" href="http://mdgallery.strangebutfunny.net/browse.php?serverhash=<?php echo $s->getPublicKey(); ?>">
+					<img class="pure-img" src="http://mdgallery.strangebutfunny.net/serverimage.php?server=<?php echo $s->getPublicKey(); ?>" width="160" height="120"/>
+				</a>
+				<div class="pure-u-2-3">
+					<p><?php echo htmlspecialchars($s->getMotd()); ?><br/>
+					Address: <strong><?php echo htmlspecialchars($s->getAddress()); ?></strong><br/>
+					Players: <strong><?php echo htmlspecialchars($s->getUserList()); ?></strong><br/>
+					Version: <strong><?php echo htmlspecialchars($s->getVersion()); ?></strong><br/>
+					Last Ping: <strong><?php echo Utility::formatDateDiff($dateDiff); ?> ago</strong></p>
+				</div>
+				<div class="pure-u-1-6">
+					<a <?php echo 'href="' . $link . '" '; if($offline) { ?>class="pure-button bg-error">Offline<?php } else { ?>class="pure-button bg-success">Online, Join Now!<?php } ?></a>
+				</div>
+			</div>
+<?php } ?>
 
 			<div class="footer l-box is-center">
 				Brought to you with lots of love by <a href="https://github.com/manicdigger/manicdigger/graphs/contributors">those guys</a>.<br/>

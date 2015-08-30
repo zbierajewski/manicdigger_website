@@ -1,4 +1,6 @@
 <?php
+require_once("../config/db.php");
+require_once("../config/hash.php");
 require_once("../classes/Server.php");
 header('Content-type: text/plain');
 function ServerPulse() {

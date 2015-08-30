@@ -1,6 +1,5 @@
 <?php
 require_once("Utility.php");
-require_once("../config/hash.php");
 
 class Server {
 
