@@ -1,8 +1,8 @@
 		<div class="header">
 			<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
 				<div class="header-login pure-menu-heading">
-					Logged in as: <b><?php echo $_SESSION['user_name']; ?></b> &mdash;
-					<a href="index.php?logout">Logout</a>
+					Logged in as: <b><?php echo $_SESSION['user_name']; ?></b>
+					<a href="index.php?logout" class="pure-button bg-warning">Logout</a>
 				</div>
 				<ul class="pure-menu-list">
 					<li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
