@@ -64,6 +64,23 @@ a.pure-button-primary {
     font-size: 120%;
 }
 
+/*
+ * -- EXTRA BUTTON STYLES --
+ * Defines some extra button colors. As seen on: http://purecss.io/buttons/
+ */
+.bg-success {
+    background: rgb(28, 184, 65);
+}
+.bg-error {
+    background: rgb(202, 60, 60);
+}
+.bg-warning {
+    background: rgb(223, 117, 20);
+}
+.bg-secondary {
+    background: rgb(66, 184, 221);
+}
+
 a.pure-button-transparent {
 	background: transparent;
 	color: white;
@@ -93,16 +110,16 @@ a.pure-button-transparent {
 
 .home-menu .pure-menu-heading {
     color: white;
-    font-weight: 400;
-    font-size: 120%;
+    text-transform: none;
 }
 
-.home-menu .pure-menu-selected a {
+.home-menu .pure-menu-selected a,
+.home-menu .pure-menu-selected a:visited {
     color: white;
     font-weight: bold;
 }
 
-.home-menu a {
+.home-menu li a {
     color: #6FBEF3;
 }
 .home-menu li a:hover,
@@ -132,7 +149,7 @@ a.pure-button-transparent {
  */
 .splash-container {
     /*background: #1f8dd6;*/
-	background: transparent url("http://manicdigger.org/images/background.jpg");
+	background: transparent url("../img/background.jpg");
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -178,6 +195,31 @@ a.pure-button-transparent {
     z-index: 2;
     background: rgb(220, 220, 220);
     box-shadow: 0 2em 2em 2em rgba(0, 0, 0, 0.9);
+}
+
+.serverlist-wrapper {
+    min-height: 100%;
+    background: rgb(220, 220, 220);
+}
+.serverlist-image {
+    padding-right: 1em;
+}
+.serverlist-entry {
+    padding: 0 1em 1em 1em;
+    border-top: 2px dotted #CCC;
+    /*line-height: 1.5em;*/
+}
+.serverlist-entry p {
+    margin: 0;
+    /*font-size: 90%;*/
+    /*background-color: #eee;*/
+}
+.serverlist-entry h2 a {
+    color: #22aa22;
+    text-decoration: none;
+}
+.serverlist-entry h2 a.offline-link {
+    color: #aa2222;
 }
 
 /* This is the class used for the main content headers (<h2>) */

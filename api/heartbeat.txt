@@ -1,0 +1,1 @@
+http://manicdigger.org/api/heartbeat.php
