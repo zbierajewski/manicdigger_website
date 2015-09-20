@@ -16,16 +16,17 @@ if (isset($login)) {
 		<div class="header">
 			<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
 <?php
-if ($login->isUserLoggedIn() == true) {
-	// user logged in
+if ($view_location == "servers") {
+	if ($login->isUserLoggedIn() == true) {
+		// user logged in
 ?>
 				<div class="header-login pure-menu-heading">
 					Logged in as: <b><?php echo $_SESSION['user_name']; ?></b>
 					<a href="index.php?logout" class="pure-button bg-warning">Logout</a>
 				</div>
 <?php
-} else {
-	// user not logged in
+	} else {
+		// user not logged in
 ?>
 				<div class="header-login">
 					<form id="login" action="index.php" class="pure-form" method="post">
@@ -40,7 +41,10 @@ if ($login->isUserLoggedIn() == true) {
 						</fieldset>
 					</form>
 				</div>
-<?php } ?>
+<?php
+	}
+}
+?>
 				<ul class="pure-menu-list">
 					<li class="pure-menu-item<?php if ($view_location == 'index') {echo ' pure-menu-selected';} ?>"><a href="/" class="pure-menu-link">Home</a></li>
 					<li class="pure-menu-item"><a href="http://forum.manicdigger.org/" class="pure-menu-link">Forum</a></li>
