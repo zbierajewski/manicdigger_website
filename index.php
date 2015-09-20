@@ -22,6 +22,9 @@ if (isset($_GET["location"])) {
 } else {
     $view_location = 'index';
 }
+if (isset($_GET["rw"])) {
+    $rewrite_enabled = true;
+}
 
 // display content corresponding to requested location
 switch ($view_location) {

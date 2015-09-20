@@ -94,6 +94,9 @@ class Login
                         $_SESSION['user_name'] = $result_row->user_name;
                         $_SESSION['user_login_status'] = 1;
 
+                        // return a little feeedback message
+                        $this->messages[] = "Login successful.";
+
                     } else {
                         $this->errors[] = "Wrong password. Try again."; //TODO: This might be a security risk?
                     }

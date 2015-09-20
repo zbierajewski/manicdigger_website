@@ -1,3 +1,3 @@
 Options +FollowSymLinks
 RewriteEngine on
-RewriteRule ^([a-zA-Z]+)$ index.php?location=$1 [L]
+RewriteRule ^([a-zA-Z]+)?$ index.php?rw=1&location=$1 [QSA,L]
