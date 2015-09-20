@@ -9,8 +9,8 @@
 		<link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
 
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-		<link rel="stylesheet" href="css/layout.css">
 		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+		<link rel="stylesheet" href="css/layout.css">
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 	</head>
 	<body>

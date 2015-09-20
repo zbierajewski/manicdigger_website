@@ -19,7 +19,7 @@ if ($view_location == "servers") {
 							<input class="pure-input-1-5" name="user_name" type="text" placeholder="Username" />
 							<input class="pure-input-1-5" name="user_password" type="password" placeholder="Password" />
 							<button type="submit" name="login" class="pure-button bg-success">Sign in</button>
-							<a href="./register.php" class="pure-button">Register</a>
+							<a href="./register<?php if (!$rewrite_enabled) { echo '.php'; }?>" class="pure-button">Register</a>
 							<!-- <label for="rememberme">
 								<input name="rememberme" type="checkbox" /> Remember me
 							</label> -->

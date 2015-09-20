@@ -8,10 +8,15 @@
  * -- BASE STYLES --
  * Most of these are inherited from Base, but I want to change a few.
  */
+html {
+    height: 100%;
+}
+
 body {
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 13px;
+    height: 100%;
 }
 
 h1,
@@ -175,6 +180,29 @@ a.pure-button-transparent {
     box-shadow: 0 0 4em rgba(0, 0, 0, 1);
 }
 
+.centerbox-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.centerbox {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding: 1em;
+}
+
+.centerbox hr {
+    border: none;
+    border-top: 1px solid #CCCCCC;
+}
+
+.pull-right {
+    float: right;
+}
+
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
     color: white;
@@ -199,7 +227,7 @@ a.pure-button-transparent {
 
 /* Serverlist styles */
 .serverlist-wrapper {
-    margin-top: 3.7em;
+    padding-top: 3.7em;
     min-height: 100%;
     background: rgb(220, 220, 220);
 }

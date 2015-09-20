@@ -30,5 +30,13 @@ require_once("classes/Registration.php");
 // so this single line handles the entire registration process.
 $registration = new Registration();
 
+if (isset($_GET["rw"])) {
+    $rewrite_enabled = true;
+}
+$page_title = 'Register';
+
+include("views/header.php");
+include("views/menu_bar.php");
 // show the register view (with the registration form, and messages/errors)
-include("views/register.php");
+include("views/content_register.php");
+include("views/footer.php");

@@ -1,3 +1,4 @@
 Options +FollowSymLinks
 RewriteEngine on
+RewriteRule register$ register.php?rw=1 [QSA,L]
 RewriteRule ^([a-zA-Z]+)?$ index.php?rw=1&location=$1 [QSA,L]
