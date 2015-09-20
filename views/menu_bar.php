@@ -1,18 +1,3 @@
-<?php
-// show potential errors / feedback (from login object)
-if (isset($login)) {
-	if ($login->errors) {
-		foreach ($login->errors as $error) {
-			echo $error;
-		}
-	}
-	if ($login->messages) {
-		foreach ($login->messages as $message) {
-			echo $message;
-		}
-	}
-}
-?>
 		<div class="header">
 			<div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
 <?php
@@ -22,14 +7,14 @@ if ($view_location == "servers") {
 ?>
 				<div class="header-login pure-menu-heading">
 					Logged in as: <b><?php echo $_SESSION['user_name']; ?></b>
-					<a href="index.php?logout" class="pure-button bg-warning">Logout</a>
+					<a href="index.php?location=servers&amp;logout" class="pure-button bg-warning">Logout</a>
 				</div>
 <?php
 	} else {
 		// user not logged in
 ?>
 				<div class="header-login">
-					<form id="login" action="index.php" class="pure-form" method="post">
+					<form id="login" action="index.php?location=servers" class="pure-form" method="post">
 						<fieldset>
 							<input class="pure-input-1-5" name="user_name" type="text" placeholder="Username" />
 							<input class="pure-input-1-5" name="user_password" type="password" placeholder="Password" />

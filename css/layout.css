@@ -197,7 +197,9 @@ a.pure-button-transparent {
     box-shadow: 0 2em 2em 2em rgba(0, 0, 0, 0.9);
 }
 
+/* Serverlist styles */
 .serverlist-wrapper {
+    margin-top: 3.7em;
     min-height: 100%;
     background: rgb(220, 220, 220);
 }
@@ -220,6 +222,11 @@ a.pure-button-transparent {
 }
 .serverlist-entry h2 a.offline-link {
     color: #aa2222;
+}
+.serverlist-messages {
+    text-align: center;
+    font-weight: bold;
+    color: #222222;
 }
 
 /* This is the class used for the main content headers (<h2>) */

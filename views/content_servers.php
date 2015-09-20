@@ -1,5 +1,25 @@
 		<div class="serverlist-wrapper">
-			<br/><br/><br/>
+<?php
+// show potential errors / feedback (from login object)
+if (isset($login)) {
+?>
+			<div class="pure-g serverlist-messages is-center">
+<?php
+	if ($login->errors) {
+		foreach ($login->errors as $error) {
+			echo '<div class="pure-u-1 bg-error">' . $error . '</div>';
+		}
+	}
+	if ($login->messages) {
+		foreach ($login->messages as $message) {
+			echo '<div class="pure-u-1 bg-success">' . $message . '</div>';
+		}
+	}
+?>
+			</div>
+<?php
+}
+?>
 			<h1 class="is-center">Manic Digger Online Servers</h1>
 <?php
 require_once "classes/Utility.php";
