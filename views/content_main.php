@@ -57,8 +57,8 @@
 							Optimized for performance
 						</h3>
 						<p>
-							Don't own the latest cutting-edge hardware? No problem!<br/>
-							Manic Digger has been built with performance in mind and also runs on aging hardware.
+							You don't own the latest cutting-edge hardware? No problem!<br/>
+							Manic Digger has been built with performance in mind and also runs well on aging hardware.
 						</p>
 					</div>
 					<div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-3">
@@ -69,23 +69,27 @@
 						<p>
 							Manic Digger offers an extensive server-side API for Mods written in either C# or JavaScript.<br/>
 							You want to create your own gamemodes? Are you annoyed by the default set of blocks?<br/>
-							Go ahead, the only limit is your creativity!
+							Go ahead and change what you want, the only limit is your creativity!
 						</p>
 					</div>
 				</div>
 			</div>
 
 			<div class="ribbon l-box-lrg pure-g">
-				<div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+				<div class="l-box-lrg is-center pure-u-1-4 pure-u-md-1-3 pure-u-lg-2-5">
 					<img class="pure-img-responsive" alt="Funny Icons" width="300" src="img/hex_files.png">
 				</div>
-				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+				<div class="pure-u-1 pure-u-md-2-3 pure-u-lg-3-5">
 					<h2 class="content-head content-head-ribbon">Full source code available</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor.
+						Manic Digger is open source.<br/>
+						This means everyone can contribute to the game and propose changes or new features.<br/>
+						You can <a href="https://github.com/manicdigger/manicdigger">fork our code on GitHub</a> and file a pull request against our repository.
+						After review it will then be merged.<br/>
+					</p>
+					<p>
+						<em>Not comfortable with coding?</em> No problem!<br/>
+						You can also share your thoughts in <a href="">the forum</a> to bring in new ideas.
 					</p>
 				</div>
 			</div>
@@ -128,16 +132,20 @@
 			</div>
 
 			<div class="ribbon l-box-lrg pure-g">
-				<div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+				<div class="pure-u-1 pure-u-md-2-3 pure-u-lg-3-5">
 					<h2 class="content-head content-head-ribbon">Translations</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor.
+						Manic Digge ris currently available in english and german.<br/>
+						However there is a translation system offering the possiblility to include additional languages.<br/>
+					</p>
+					<p>
+						Do you want to translate Manic Digger into your native language?<br/>
+						Simply grab a copy of the <a href="https://github.com/manicdigger/manicdigger/blob/master/data/localization/en.txt">original texts on GitHub</a> and get going!
+						Once you are done either post the file in the forum or file a pull request on GitHub.
+						Any new translations are welcome!
 					</p>
 				</div>
-				<div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+				<div class="l-box-lrg is-center pure-u-1-4 pure-u-md-1-3 pure-u-lg-2-5">
 					<img class="pure-img-responsive" alt="Funny Icons" width="300" src="img/hex_browser.png">
 				</div>
 			</div>
@@ -150,13 +158,13 @@
 				</p>
 
 				<div class="pure-g">
-					<div class="l-box-lrg is-center pure-u-1 pure-u-md-1-3">
+					<div class="l-box-lrg is-center pure-u-1-3">
 						<img class="pure-img-responsive" alt="Chat" width="100" src="img/hex_stats.png">
 					</div>
-					<div class="l-box-lrg is-center pure-u-1 pure-u-md-1-3">
+					<div class="l-box-lrg is-center pure-u-1-3">
 						<img class="pure-img-responsive" alt="Chat" width="100" src="img/hex_messages.png">
 					</div>
-					<div class="l-box-lrg is-center pure-u-1 pure-u-md-1-3">
+					<div class="l-box-lrg is-center pure-u-1-3">
 						<img class="pure-img-responsive" alt="Chat" width="100" src="img/hex_warning.png">
 					</div>
 
