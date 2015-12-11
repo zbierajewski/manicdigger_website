@@ -32,8 +32,8 @@ if ($view_location == "servers") {
 ?>
 				<ul class="pure-menu-list">
 					<li class="pure-menu-item<?php if ($view_location == 'index') {echo ' pure-menu-selected';} ?>"><a href="/" class="pure-menu-link">Home</a></li>
-					<li class="pure-menu-item"><a href="http://forum.manicdigger.org/" class="pure-menu-link">Forum</a></li>
-					<li class="pure-menu-item"><a href="http://wiki.manicdigger.org/" class="pure-menu-link">Wiki</a></li>
+					<li class="pure-menu-item"><a href="//forum.manicdigger.org/" class="pure-menu-link">Forum</a></li>
+					<li class="pure-menu-item"><a href="//wiki.manicdigger.org/" class="pure-menu-link">Wiki</a></li>
 					<li class="pure-menu-item"><a href="http://mdgallery.strangebutfunny.net/" class="pure-menu-link">Gallery</a></li>
 					<li class="pure-menu-item<?php if ($view_location == 'servers') {echo ' pure-menu-selected';} ?>"><a href="/<?php if (!$rewrite_enabled) { echo 'index.php?location='; } ?>servers" class="pure-menu-link">Serverlist</a></li>
 				</ul>
