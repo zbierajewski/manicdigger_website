@@ -2,7 +2,7 @@
 
 class Utility {
 	public static function getSQLConnection() {
-		if($mysqli == null) {
+		if(!isset($mysqli) || $mysqli == null) {
 			$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
             // change character set to utf8 and check it
