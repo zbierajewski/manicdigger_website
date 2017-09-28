@@ -1,1 +1,1 @@
-http://manicdigger.org/api/csv.php
+https://servers.manicdigger.io/api/csv.php

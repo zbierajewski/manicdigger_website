@@ -1,1 +1,1 @@
-http://manicdigger.org/api/heartbeat.php
+https://servers.manicdigger.io/api/heartbeat.php

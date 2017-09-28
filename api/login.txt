@@ -1,1 +1,1 @@
-http://manicdigger.org/api/login.php
+https://servers.manicdigger.io/api/login.php
